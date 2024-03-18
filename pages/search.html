@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Spotify - Búsqueda</title>
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/styles.css">
+    <link rel="stylesheet" href="/Styles/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body class="search-page">
+    <spotify-navbar></spotify-navbar>
+    <div id="app">
+        <spotify-search></spotify-search>
+    </div>
+    <!-- Modal -->
+    <modal-component></modal-component>
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Importación de archivos JS separados desde la carpeta Componentes -->
+    <script type="module" src="/src/Components/SpotifyNavbar/spotify-navbar.js"></script>
+    <script type="module" src="/src/Components/Search/spotify-search.js"></script>
+    <script type="module" src="/src/Components/modal/modal.js"></script>
+    <script type="module" src="/app.js"></script>
+</body>
+
+</html>

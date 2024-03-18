@@ -1,0 +1,26 @@
+nav {
+    background: linear-gradient(to right, #000, #1DB954); /* Fondo con degradado */
+    padding: 10px 0;
+}
+nav ul {
+    list-style-type: none; /* Elimina los estilos de lista */
+    margin: 0;
+    padding: 0.5em 1em;
+}
+nav li {
+    display: inline; /* Elementos en línea */
+    margin-right: 20px;
+}
+nav a {
+    text-decoration: none; /* Sin subrayado */
+    color: #fff; /* Texto blanco para contraste */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s; /* Transición suave de color */
+}
+nav a:hover {
+    color: #ccc; /* Cambio de color al pasar el cursor */
+}
+nav a.active {
+    color: #1DB954; /* Color de resaltado para el ícono en la página activa */
+}

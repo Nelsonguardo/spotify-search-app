@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a la Aplicación de Spotify</title>
+    <link rel="stylesheet" href="Styles/welcome.css">
+    <link rel="stylesheet" href="Styles/nav.css">
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+
+</head>
+<spotify-navbar></spotify-navbar>
+
+<body>
+    <div class="hero">
+        <h1>
+            Bienvenidos a <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png" />
+        </h1>
+        <span>
+            ¡Bienvenido a nuestra app de música! Aquí podrás disfrutar de millones de canciones, crear listas de
+            reproducción personalizadas y descubrir nuevos artistas según tus gustos musicales. Déjate llevar por el
+            ritmo y sumérgete en un mundo de melodías cautivadoras. <b>¡Que comience la aventura musical!</b>
+        </span>
+        <a href="/pages/login">
+            <button class="lets-get-started-button">
+                Let's Get Started!
+            </button>
+        </a>
+    </div>
+    <script type="module" src="/src/Components/SpotifyNavbar/spotify-navbar.js"></script>
+</body>
+
+</html>
