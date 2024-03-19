@@ -2,7 +2,7 @@
 
 Esta guía te ayudará a configurar y ejecutar un proyecto que incluye los módulos y componentes necesarios.
 
-## 1. Tener instalo Node 
+## 1. Tener instalado Node 
 
 Si aún no tienes instalo Node:
 
