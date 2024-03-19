@@ -59,12 +59,17 @@ export class SpotifySearch extends HTMLElement {
         event.preventDefault();
         const query = this.input.value.trim();
         if (query !== '') {
-            const results = await this.searchSpotify(query);
-            if (results) {
-                this.lastSearchResults = results; // Guardar los resultados para futuras referencias
-                this.displayResults(results);
-            } else {
+            try {
+                const results = await this.searchSpotify(query);
+                if (results) {
+                    this.lastSearchResults = results; // Guardar los resultados para futuras referencias
+                    this.displayResults(results);
+                } else {
+                    this.showErrorAlert('Error al buscar en Spotify. Por favor, inténtalo de nuevo.');
+                }
+            } catch (error) {
                 this.showErrorAlert('Error al buscar en Spotify. Por favor, inténtalo de nuevo.');
+                console.error('Error al buscar en Spotify:', error);
             }
         } else {
             this.showErrorAlert('Por favor, ingresa una consulta de búsqueda.');
@@ -92,7 +97,7 @@ export class SpotifySearch extends HTMLElement {
             return data;
         } catch (error) {
             console.error('Error al buscar en Spotify:', error);
-            return null;
+            throw error; // Propaga el error para que sea manejado en el método handleSearch
         }
     }
 
@@ -148,7 +153,6 @@ export class SpotifySearch extends HTMLElement {
             this.resultsDiv.textContent = 'No se encontraron resultados';
         }
     }
-
 
     displayPagination(totalPages) {
         const previousPage = this.currentPage > 1 ? this.currentPage - 1 : 1;
